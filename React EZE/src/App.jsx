@@ -2,14 +2,15 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import {Titulo} from './components/Titulo'
+import NavBar from './components/NavBar'
+import ContenedorDeObjetos from './components/ContenedorDeObjetos'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
+  
+return (
     <>
-      <Titulo/>
+      <NavBar/> 
+      <ContenedorDeObjetos saludo="Productos disponibles"/>
     </>
   )
 }
