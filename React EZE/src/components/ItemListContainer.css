@@ -1,0 +1,9 @@
+.productstyle { display:flex ;
+    gap:10px ;
+
+}
+
+.cart {
+    border:1px solid white;
+    padding: 10px;
+}
