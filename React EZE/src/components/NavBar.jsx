@@ -7,7 +7,7 @@ export default function NavBar() {
         <>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">{/*..icono..*/}</a>
+    <Link class="navbar-brand" to="/">{/*..icono..*/}</Link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -17,13 +17,13 @@ export default function NavBar() {
           <a class="nav-link active" aria-current="page" href="#"><Link to={'/'}>Home </Link></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"><Link to={'/products'}>Productos </Link></a>
+          <Link class="nav-link active" aria-current="page" to={'/products'}>Productos </Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"><Link to={'/contact'}>Contacto </Link></a>
+          <Link class="nav-link active" aria-current="page" to={'/contact'}>Contacto </Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"><Link to={'/sales'}>Ofertas </Link></a>
+          <Link class="nav-link active" aria-current="page" to={'/sales'}>Ofertas </Link>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#"><CartWidget/></a>

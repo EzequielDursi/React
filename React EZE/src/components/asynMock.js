@@ -3,7 +3,7 @@ const products=[
 {
     id: 1,
     title: 'Zapatos',
-    price: '2500',
+    price: 2500,
     category: 'vestimenta',
     description: 'talles: 36, 37, 38, 39, 40, 41, 42, 43, 44',
     image: 'imagenes proyecto/image productos/zapatos.png' ,
@@ -11,7 +11,7 @@ const products=[
 {
   id: 2,
   title: 'Mochilas',
-  price: '3700',
+  price: 3700,
   category: 'estudiante',
   description: ' colores: rojo, verde, negro,',
   image: 'imagenes proyecto/image productos/mochi-marron-negro-2.jpg', 
@@ -20,7 +20,7 @@ const products=[
 {
    id: 3,
    title: 'Medias',
-   price: '100',
+   price: 100,
    categaroy: 'vestimenta',
    description: 'colores: negro, blanco',
    image:'imagenes proyecto/image productos/imedias negras.jpg',
@@ -29,7 +29,7 @@ const products=[
 {
     id:4,
     title: 'Carteras',
-    price: '3000',
+    price: 3000,
     category: 'mujer',
     description: 'colores: rojo, negro, gris',
     image:'imagenes proyecto/image productos/images.jpg',
@@ -53,7 +53,7 @@ export const getProduct = (id) => {
 
 }
 
-export const getProductByCategory = (category) => {
+export const getProductsByCategory = (category) => {
     return new Promise ((resolve)=> {
 
         setTimeout(() => {
