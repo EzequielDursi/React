@@ -11,7 +11,7 @@ const Contacto = () => {
     const { register, handleSubmit } = useForm();
  
     const enviar = (datos) => {
-        console.log(datos);
+        
     }
 
 

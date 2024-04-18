@@ -6,7 +6,7 @@ const products=[
     price: 2500,
     category: 'vestimenta',
     description: 'talles: 36, 37, 38, 39, 40, 41, 42, 43, 44',
-    image: 'imagenes proyecto/image productos/zapatos.png' ,
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXdN6-GGd4WITUg6ZZkBqod4TsdGUpMmesXs6Inq4Msw&s' ,
 },
 {
   id: 2,
@@ -14,7 +14,7 @@ const products=[
   price: 3700,
   category: 'estudiante',
   description: ' colores: rojo, verde, negro,',
-  image: 'imagenes proyecto/image productos/mochi-marron-negro-2.jpg', 
+  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZRQrn_JdNDBPooWt2NJH4S3N8ZNnE2yYwb1UvSJy8Cw&s', 
 
 },
 {
@@ -23,7 +23,7 @@ const products=[
    price: 100,
    categaroy: 'vestimenta',
    description: 'colores: negro, blanco',
-   image:'imagenes proyecto/image productos/imedias negras.jpg',
+   image:'https://socksmarket.es/wp-content/uploads/2023/03/calcetines-siempre-seremos-friends-pixel-2-150x150.jpg',
 
 },
 {
@@ -32,34 +32,42 @@ const products=[
     price: 3000,
     category: 'mujer',
     description: 'colores: rojo, negro, gris',
-    image:'imagenes proyecto/image productos/images.jpg',
+    image:'https://iluminaras.com/wp-content/uploads/2024/03/D_642157-MLU74736963188_032024-F-150x150.jpg',
 },
+
+{
+    id:5,
+    title: 'Pantalones',
+    price: 900,
+    category: 'vestimenta',
+    description: 'colores: verde, negro, gris',
+    image:'https://taziamx.com/cdn/shop/products/Pantalones-Lizzie-Verde-3_150x.jpg?v=1681323440',
+},
+
+{
+    id:6,
+    title: 'Remeras',
+    price: 1200,
+    category: 'vestimenta',
+    description: 'colores: amarillo, blanco, negro',
+    image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnLYVHLKpplMTJeObPk53eich458_7S0OmgQ28UifEiA&s',
+},
+
+
 ]
 
-export const getProducts = new Promise((resolve)=>{
-    setTimeout(()=>{
-        resolve(products);
-    }, 2000);
-
-})
+export const getProducts = new Promise((resolve) => {
+    resolve(products);
+});
 
 export const getProduct = (id) => {
-
-    return new Promise ((resolve)=> {
- setTimeout(()=> {
-    resolve(products.find(prod => prod.id == id));
- },2000)
-    }) 
-
-}
+    return new Promise((resolve) => {
+        resolve(products.find(prod => prod.id == id));
+    });
+};
 
 export const getProductsByCategory = (category) => {
-    return new Promise ((resolve)=> {
-
-        setTimeout(() => {
-            resolve(products.find(prod=> prod.category == category))
-        },2000
-        
-        );
-    })
-}
+    return new Promise((resolve) => {
+        resolve(products.filter(prod => prod.category == category));
+    });
+};

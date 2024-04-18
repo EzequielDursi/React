@@ -8,6 +8,7 @@ import CategoryComponent from './components/CategoryComponent'
 import Contacto from './components/Contacto'
 import {CartContext, CartProvider} from "./context/CartContext"
 import Carrito from './components/Carrito'
+import HomeComponent from './components/HomeComponent.jsx'
 
 function App() {
 
@@ -19,7 +20,7 @@ return (
     <BrowserRouter>
     <NavBar/>
     <Routes>
-     
+       <Route exact path="/" element= {<HomeComponent/>}/>
       <Route exact path="/products" element={<ItemListContainer/>}/>
       <Route exact path="/product/:prodId" element={<ItemDetailContainer/>}/>
       <Route exact path="/category/:catName" element={<CategoryComponent/>}/>

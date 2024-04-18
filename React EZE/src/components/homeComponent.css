@@ -1,0 +1,13 @@
+.titulo-home {
+    
+        font-size: 36px; /* Tamaño del texto */
+        color: coral; /* Color del texto */
+        /* Otros estilos opcionales */
+        font-family: Arial, sans-serif; /* Familia de fuente */
+        font-weight: bold; /* Grosor del texto */
+        text-align: center; /* Alineación del texto */
+        /* Margen para centrar el título */
+        margin-top: 50px;
+        margin-bottom: 50px;
+    
+}

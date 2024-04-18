@@ -3,7 +3,8 @@ import { useState, useEffect, useContext } from 'react';
 import { getProduct } from './asynMock';
 import Contador from './Contador';
 import {CartContext} from "../context/CartContext"
-
+import {getDoc, doc} from "firebase/firestore"
+import{db} from "../firebase/firebase"
 
 export default function ItemDetailContainer() {
 
@@ -15,18 +16,26 @@ export default function ItemDetailContainer() {
     const[product, setProduct]  = useState({});
 
     useEffect(() => {
-        const fetchProduct = async () => {
-            try {
-                const fetchedProduct = await getProduct(prodId);
-                setProduct(fetchedProduct);
-            } catch (error) {
-                console.error('Error fetching product:', error);
-            }
-        };
+        
 
-        fetchProduct();
-    }, [prodId]);
+        const docRef= doc(db, "productos", prodId)
 
+        getDoc(docRef)
+        .then(response => {
+            const data = response.data ()
+            const productAdapted = { id: response.id, ...data}
+            setProduct(productAdapted)
+        })
+        .catch( error => {
+            console.log(error)
+        })
+        .finally(() => {
+            
+        })
+      }, [prodId]);
+
+
+  
     return (
          <>
 

@@ -1,17 +1,25 @@
 import {useNavigate} from 'react-router-dom';
 import { useState } from 'react';
-import {getProducts} from './asynMock.js';
+import {getProducts} from '../firebase/firebase.js';
 import { useEffect } from 'react';
-import './ItemListContainer.css'
+import './ItemListContainer.css';
+import { collection, getDocs} from "firebase/firestore";
+import {db} from "../firebase/firebase.js";
 
 export default function ItemListContainer({saludo}) {
    const navigate = useNavigate();
 
    const [products, setProducts] = useState([])
    
-   useEffect(()=>{
-       getProducts.then(data => setProducts(data));
-   },[]);
+  async function obtenerProductos(){
+
+    const productos= await getProducts();
+    setProducts(productos)
+  }
+
+  useEffect (() => {
+    obtenerProductos()
+  }, []) ;
 
    const handleClick = (id) => { 
       navigate(`/product/${id}`);
