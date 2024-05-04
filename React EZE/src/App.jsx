@@ -9,7 +9,7 @@ import Contacto from './components/Contacto'
 import {CartContext, CartProvider} from "./context/CartContext"
 import Carrito from './components/Carrito'
 import HomeComponent from './components/HomeComponent.jsx'
-
+import Checkout from './components/Checkout.jsx'
 function App() {
 
  
@@ -26,6 +26,8 @@ return (
       <Route exact path="/category/:catName" element={<CategoryComponent/>}/>
       <Route exact path="/contact" element={<Contacto/>}/>
       <Route exact path="/carrito" element={<Carrito/>}/>
+      <Route exact path="/checkout" element={<Checkout/>}/>
+
       </Routes>
       
       </BrowserRouter>
